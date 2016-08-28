@@ -30,11 +30,9 @@
                   <%= local.descripcion %>
                 </div>
               </div>
-              <div class="button" role="group" style="margin-top:10px; margin-bottom:10px">
-                <%= link_to 'Borrar', local, method: :delete, data: { confirm: '¿Estás seguro?' }, :class =>"btn btn-default" %>
+                <%= button_to 'Borrar', local, :method => :delete, :class =>"btn btn-default" %>
                 <%= link_to 'Ver', local, :class => "btn btn-default"  %>
                 <%= link_to 'Editar', edit_local_path(local), :class => "btn btn-default" %>
-              </div>
             </div>
           </div>
         </div>

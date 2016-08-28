@@ -40,6 +40,11 @@ body {
     <li><a href="<%= root_path%>">Inicio</a></li>
     <li><a href="<%= locals_path %>">Locales</a></li>
     <li><a href="<%= servicios_turisticos_path %>">Servicios Turisticos</a></li>
-    <li><a href="#ServiciosPublicos">Servicios Publicos</a></li>
+    <li><a href="<%= servicios_publicos_path %>">Servicios Publicos</a></li
+    <li></li>
+    <li><a href="<%= new_usuario_session_path %>">Iniciar sesión </a></li>
+    <li><a href="<%= new_usuario_registration_path %>">Registrarse </a></li>
+    <li><a><%= button_to('Cerrar sesion', destroy_usuario_session_path, :method => :delete) %> </a></li>
+
   </ul>
 </div>

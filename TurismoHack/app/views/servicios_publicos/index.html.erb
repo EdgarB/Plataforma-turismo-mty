@@ -49,7 +49,7 @@
           <td><%= servicios_publico.domingo %></td>
           <td><%= link_to 'Show', servicios_publico, :class => "btn btn-default" %></td>
           <td><%= link_to 'Edit', edit_servicios_publico_path(servicios_publico), :class => "btn btn-default" %></td>
-          <td><%= link_to 'Destroy', servicios_publico, :class => "btn btn-default" , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= button_to 'Destroy', servicios_publico, :class => "btn btn-default" , :method => :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
