@@ -13,61 +13,84 @@
 
   <div class="field">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, :class=>'form-control', :placeholder=>'Ingrese el nombre del servicio.'%>
   </div>
   <div class="field">
     <%= f.label :foto %><br>
-    <%= f.text_field :foto %>
+    <%= f.text_field :foto, :class=>'form-control', :placeholder=>'Ingrese el url de la foto.' %>
   </div>
   <div class="field">
     <%= f.label :descripcion %><br>
-    <%= f.text_area :descripcion %>
-  </div>
-  <div class="field">
-    <%= f.label :apertura %><br>
-    <%= f.time_select :apertura %>
-  </div>
-  <div class="field">
-    <%= f.label :clausura %><br>
-    <%= f.time_select :clausura %>
+    <%= f.text_area :descripcion, :class=>'form-control', :placeholder=>'Ingrese la descripcion del servicio.' %>
   </div>
   <div class="field">
     <%= f.label :direccion %><br>
-    <%= f.text_field :direccion %>
+    <%= f.text_field :direccion, :class=>'form-control', :placeholder=>'Ingrese la direccion de servicio.' %>
   </div>
+<div class="form-group">
   <div class="field">
     <%= f.label :contacto %><br>
-    <%= f.text_field :contacto %>
+    <%= f.text_field :contacto, :class=>'form-control', :placeholder=>'Ingrese los datos de contacto' %>
   </div>
-  <div class="field">
-    <%= f.label :lunes %><br>
-    <%= f.check_box :lunes %>
+</div>
+<div class="form-group">
+  <div class="row">
+   <div class="col-xs-1">
+    <div class="field">
+      <%= f.label :lun %><br>
+      <%= f.check_box :lunes %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :martes %><br>
-    <%= f.check_box :martes %>
+  <div class="col-xs-1">
+    <div class="field">
+      <%= f.label :mar %><br>
+      <%= f.check_box :martes %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :miercoles %><br>
-    <%= f.check_box :miercoles %>
+  <div class="col-xs-1">
+    <div class="field">
+      <%= f.label :mie %><br>
+      <%= f.check_box :miercoles %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :jueves %><br>
-    <%= f.check_box :jueves %>
+  <div class="col-xs-1">
+    <div class="field">
+      <%= f.label :jue %><br>
+      <%= f.check_box :jueves %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :viernes %><br>
-    <%= f.check_box :viernes %>
+  <div class="col-xs-1">
+    <div class="field">
+      <%= f.label :vie %><br>
+      <%= f.check_box :viernes %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :sabado %><br>
-    <%= f.check_box :sabado %>
+  <div class="col-xs-1">
+    <div class="field">
+      <%= f.label :sab %><br>
+      <%= f.check_box :sabado %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :domingo %><br>
-    <%= f.check_box :domingo %>
+    <div class="col-xs-1">
+      <div class="field">
+        <%= f.label :dom %><br>
+        <%= f.check_box :domingo %>
+      </div>
+    </div>
   </div>
+</div>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :apertura, "Hora de abrir" %><br>
+      <%= f.time_select :apertura %>
+    </div>
+    <div class="field">
+      <%= f.label :clausura, "Hora de cerrar" %><br>
+      <%= f.time_select :clausura %>
+    </div>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "aceptar", :class =>"btn btn-primary"  %>
   </div>
 <% end %>
