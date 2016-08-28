@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-ul {
+#verticalNav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,28 +14,32 @@ ul {
     overflow: auto;
 }
 
-li a {
+#verticalNav ul li a {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-li a.active {
+#verticalNav ul li a.active {
     background-color: #4CAF50;
     color: white;
 }
 
-li a:hover:not(.active) {
+#verticalNav ul li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
 
 </style>
+<div id="verticalNav">
 
-<ul>
-  <li><a class="active" href="#Inicio">Inicio</a></li>
-  <li><a href="locals">Locales</a></li>
-  <li><a href="#ServiciosTuristicos">Servicios Turisticos</a></li>
-  <li><a href="#ServiciosPublicos">Servicios Publicos</a></li>
-</ul>
+  <ul>
+    <br>
+    <br>
+    <li><a  class="active" href="#Inicio">Inicio</a></li>
+    <li><a  href="locals">Locales</a></li>
+    <li><a href="#ServiciosTuristicos">Servicios Turisticos</a></li>
+    <li><a href="#ServiciosPublicos">Servicios Publicos</a></li>
+  </ul>
+</div>
