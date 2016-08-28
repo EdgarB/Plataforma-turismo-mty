@@ -32,21 +32,23 @@ body {
 }
 
 </style>
-<div id="verticalNav">
+<% if usuario_signed_in? %>
+  <div id="verticalNav">
 
-  <ul>
-    <br>
-    <br>
-    <li><a href="<%= root_path%>">Inicio</a></li>
-    <li><a href="<%= locals_path %>">Locales</a></li>
-    <li><a href="<%= servicios_turisticos_path %>">Servicios Turisticos</a></li>
-    <li><a href="<%= servicios_publicos_path %>">Servicios Publicos</a></li
-    <li></li>
-    <% if current_usuario.nil? %>
-      <li><a href="<%= new_usuario_session_path %>">Iniciar sesión </a></li>
-      <li><a href="<%= new_usuario_registration_path %>">Registrarse </a></li>
-    <% else %>
-      <li><a><%= button_to('Cerrar sesion', destroy_usuario_session_path, :method => :delete) %> </a></li>
-    <% end %>
-  </ul>
-</div>
+    <ul>
+      <br>
+      <br>
+      <li><a href="<%= root_path%>">Inicio</a></li>
+      <li><a href="<%= locals_path %>">Locales</a></li>
+      <li><a href="<%= servicios_turisticos_path %>">Servicios Turisticos</a></li>
+      <li><a href="<%= servicios_publicos_path %>">Servicios Publicos</a></li
+      <li></li>
+      <% if current_usuario.nil? %>
+        <li><a href="<%= new_usuario_session_path %>">Iniciar sesión </a></li>
+        <li><a href="<%= new_usuario_registration_path %>">Registrarse </a></li>
+      <% else %>
+        <li><a><%= button_to('Cerrar sesion', destroy_usuario_session_path, :method => :delete) %> </a></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
