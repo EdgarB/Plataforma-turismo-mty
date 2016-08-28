@@ -1,6 +1,6 @@
 class LocalsController < ApplicationController
   before_action :set_local, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, except:[ :index]
   # GET /locals
   # GET /locals.json
   def index
