@@ -1,0 +1,29 @@
+<div class="col-xs-9 col-xs-push-3">
+  <div class="container">
+    <br><br>
+    <p id="notice"><%= notice %></p>
+
+    <h1>Lista de locales</h1>
+
+      <% @locals.each do |local| %>
+        <div  class="col-xm-12 col-md-4">
+          <div class="thumbnail">
+            <%= local.nombre %>
+            <%= local.apertura %>
+            <%= local.clausura %>
+            <%= local.descripcion %>
+            <%= link_to 'Show', local %>
+            <%= link_to 'Edit', edit_local_path(local) %>
+            <%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+
+
+      <% end %>
+
+
+    <br>
+
+    <%= link_to 'New Local', new_local_path %>
+  </div>
+</div>

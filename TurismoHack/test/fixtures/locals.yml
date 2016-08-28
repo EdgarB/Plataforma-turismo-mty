@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apertura: 2016-08-27 21:39:00
+  clausura: 2016-08-27 21:39:00
+  descripcion: MyText
+
+two:
+  nombre: MyString
+  apertura: 2016-08-27 21:39:00
+  clausura: 2016-08-27 21:39:00
+  descripcion: MyText
