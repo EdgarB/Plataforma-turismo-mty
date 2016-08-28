@@ -8,13 +8,36 @@
       <% @locals.each do |local| %>
         <div  class="col-xm-12 col-md-4">
           <div class="thumbnail">
-            <%= local.nombre %>
-            <%= local.apertura %>
-            <%= local.clausura %>
-            <%= local.descripcion %>
-            <%= link_to 'Show', local %>
-            <%= link_to 'Edit', edit_local_path(local) %>
-            <%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <%= local.nombre %>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <%= local.apertura %>
+
+                </div>
+                <div class="col-xs-12">
+                  <%= local.clausura %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <%= local.descripcion %>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="buttons" style="margin-top:10px; margin-bottom:10px">
+              <%= link_to 'Show', local, :class => 'btn' %>
+              <%= link_to 'Edit', edit_local_path(local), :class => 'btn' %>
+              <%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' }, :class =>'btn' %>
+            </div>
+
           </div>
         </div>
 
@@ -24,6 +47,7 @@
 
     <br>
 
-    <%= link_to 'New Local', new_local_path %>
+
   </div>
+  <%= link_to 'New Local', new_local_path, :class => 'btn' %>
 </div>
