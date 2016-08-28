@@ -1,0 +1,1 @@
+json.array! @servicios_turisticos, partial: 'servicios_turisticos/servicios_turistico', as: :servicios_turistico
