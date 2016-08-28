@@ -1,0 +1,2 @@
+json.extract! servicios_publico, :id, :nombre, :foto, :descripcion, :apertura, :clausura, :direccion, :contacto, :lunes, :martes, :miercoles, :jueves, :viernes, :sabado, :domingo, :created_at, :updated_at
+json.url servicios_publico_url(servicios_publico, format: :json)

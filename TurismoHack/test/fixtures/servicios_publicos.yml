@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  foto: MyString
+  descripcion: MyText
+  apertura: 2016-08-28 03:09:30
+  clausura: 2016-08-28 03:09:30
+  direccion: MyString
+  contacto: MyString
+  lunes: false
+  martes: false
+  miercoles: false
+  jueves: false
+  viernes: false
+  sabado: false
+  domingo: false
+
+two:
+  nombre: MyString
+  foto: MyString
+  descripcion: MyText
+  apertura: 2016-08-28 03:09:30
+  clausura: 2016-08-28 03:09:30
+  direccion: MyString
+  contacto: MyString
+  lunes: false
+  martes: false
+  miercoles: false
+  jueves: false
+  viernes: false
+  sabado: false
+  domingo: false
