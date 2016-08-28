@@ -1,26 +1,32 @@
-<div class="col-xs-9 col-xs-push-3">
+<div class="col-xs-6 col-xs-push-4">
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing Servicios Publicos</h1>
+  <h1>Listando Servicios Publicos</h1>
 
   <table>
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Foto</th>
-        <th>Descripcion</th>
-        <th>Apertura</th>
-        <th>Clausura</th>
-        <th>Direccion</th>
-        <th>Contacto</th>
-        <th>Lunes</th>
-        <th>Martes</th>
-        <th>Miercoles</th>
-        <th>Jueves</th>
-        <th>Viernes</th>
-        <th>Sabado</th>
-        <th>Domingo</th>
-        <th colspan="3"></th>
+        <div class = "row">
+          <div class = "col-xs-9">
+            <th>Nombre</th>
+            <th>Foto</th>
+            <th>Descripcion</th>
+            <th>Apertura</th>
+            <th>Clausura</th>
+            <th>Direccion</th>
+            <th>Contacto</th>
+          </div>
+        </div>
+        <div class = "row">
+          <th>Lun</th>
+          <th>Mar</th>
+          <th>Mie</th>
+          <th>Jue</th>
+          <th>Vie</th>
+          <th>Sab</th>
+          <th>Dom</th>
+        </div>
+          <th colspan="3"></th>
       </tr>
     </thead>
 
@@ -41,9 +47,9 @@
           <td><%= servicios_publico.viernes %></td>
           <td><%= servicios_publico.sabado %></td>
           <td><%= servicios_publico.domingo %></td>
-          <td><%= link_to 'Show', servicios_publico %></td>
-          <td><%= link_to 'Edit', edit_servicios_publico_path(servicios_publico) %></td>
-          <td><%= link_to 'Destroy', servicios_publico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', servicios_publico, :class => "btn btn-default" %></td>
+          <td><%= link_to 'Edit', edit_servicios_publico_path(servicios_publico), :class => "btn btn-default" %></td>
+          <td><%= link_to 'Destroy', servicios_publico, :class => "btn btn-default" , method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
