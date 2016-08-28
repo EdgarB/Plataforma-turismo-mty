@@ -1,3 +1,4 @@
+
 <div class="col-xs-9 col-xs-push-3">
   <div class="container">
     <br><br>
@@ -6,7 +7,7 @@
     <h1>Lista de locales</h1>
 
       <% @locals.each do |local| %>
-        <div  class="col-xm-12 col-md-4">
+        <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
             <div class="container">
               <div class="row">
@@ -29,15 +30,12 @@
                   <%= local.descripcion %>
                 </div>
               </div>
+              <div class="button" role="group" style="margin-top:10px; margin-bottom:10px">
+                <%= link_to 'Borrar', local, method: :delete, data: { confirm: '¿Estás seguro?' }, :class =>"btn btn-default" %>
+                <%= link_to 'Ver', local, :class => "btn btn-default"  %>
+                <%= link_to 'Editar', edit_local_path(local), :class => "btn btn-default" %>
+              </div>
             </div>
-
-
-            <div class="buttons" style="margin-top:10px; margin-bottom:10px">
-              <%= link_to 'Show', local, :class => 'btn' %>
-              <%= link_to 'Edit', edit_local_path(local), :class => 'btn' %>
-              <%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' }, :class =>'btn' %>
-            </div>
-
           </div>
         </div>
 
