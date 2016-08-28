@@ -1,0 +1,55 @@
+<div class="col-xs-9 col-xs-push-3">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Servicios Publicos</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Foto</th>
+        <th>Descripcion</th>
+        <th>Apertura</th>
+        <th>Clausura</th>
+        <th>Direccion</th>
+        <th>Contacto</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sabado</th>
+        <th>Domingo</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @servicios_publicos.each do |servicios_publico| %>
+        <tr>
+          <td><%= servicios_publico.nombre %></td>
+          <td><%= servicios_publico.foto %></td>
+          <td><%= servicios_publico.descripcion %></td>
+          <td><%= servicios_publico.apertura %></td>
+          <td><%= servicios_publico.clausura %></td>
+          <td><%= servicios_publico.direccion %></td>
+          <td><%= servicios_publico.contacto %></td>
+          <td><%= servicios_publico.lunes %></td>
+          <td><%= servicios_publico.martes %></td>
+          <td><%= servicios_publico.miercoles %></td>
+          <td><%= servicios_publico.jueves %></td>
+          <td><%= servicios_publico.viernes %></td>
+          <td><%= servicios_publico.sabado %></td>
+          <td><%= servicios_publico.domingo %></td>
+          <td><%= link_to 'Show', servicios_publico %></td>
+          <td><%= link_to 'Edit', edit_servicios_publico_path(servicios_publico) %></td>
+          <td><%= link_to 'Destroy', servicios_publico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Servicios publico', new_servicios_publico_path %>
+</div>

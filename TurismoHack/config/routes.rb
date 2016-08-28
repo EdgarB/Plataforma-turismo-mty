@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :servicios_publicos
   resources :servicios_turisticos
   resources :locals
   get 'welcome/index'

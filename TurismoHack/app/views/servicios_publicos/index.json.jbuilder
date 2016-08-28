@@ -1,0 +1,1 @@
+json.array! @servicios_publicos, partial: 'servicios_publicos/servicios_publico', as: :servicios_publico
